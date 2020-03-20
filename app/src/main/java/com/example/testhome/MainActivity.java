@@ -5,11 +5,14 @@ import androidx.viewpager.widget.ViewPager;
 
 
 import android.animation.ArgbEvaluator;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 import com.example.testhome.Interface.JSONPlaceHolderAPI;
 import com.example.testhome.Modelo.ObjetoJSON;
 import com.example.testhome.Modelo.Pelicula;
+import com.example.testhome.SQLite.DBHandler;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,8 +32,14 @@ public class MainActivity extends AppCompatActivity {
     protected List <Pelicula> listaPeliculaTOP10;
     protected Adapter adapter;
 
+    protected DBHandler db = new DBHandler(this);
+
 
     @BindView(R.id.viewPager) ViewPager viewPager;
+
+    //DB
+    private DBHandler dbMaster;
+
 
 
     @Override
@@ -42,10 +51,34 @@ public class MainActivity extends AppCompatActivity {
 
         listaPeliculaTOP10 = new ArrayList<>();
 
+        //se inicia el controlador de la base de datos con el contexto del Main Activity
+        dbMaster = new DBHandler(this);
+
+       // ByPassActivity();
         getPost();
 
 
     }
+
+
+
+
+
+    private void ByPassActivity() {
+
+        if (dbMaster.getItemCount() > 0){
+
+            Toast.makeText(this, "Valor del item 5 es: "+dbMaster.getItemById(5).getTitle(), Toast.LENGTH_SHORT).show();
+
+        }else {
+
+            getPost();
+        }
+
+
+
+    }
+
 
 
 
@@ -75,6 +108,8 @@ public class MainActivity extends AppCompatActivity {
                     if (flag <= 10) {
 
                         listaPeliculaTOP10.add(item);
+                        item.setID_PRODUCTO(flag);
+                        db.addItem(item);
 
                     }
 
@@ -83,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
                 adapter = new Adapter(listaPeliculaTOP10,getApplicationContext());
                 viewPager.setAdapter(adapter);
                 viewPager.setPadding(130,0,130,0);
+
 
 
               }

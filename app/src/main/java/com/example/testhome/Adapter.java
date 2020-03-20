@@ -71,7 +71,7 @@ public class Adapter extends PagerAdapter {
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "titulo: "+peliculaList.get(position).getTitle(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "Calificacion Media: "+peliculaList.get(position).getVote_average(), Toast.LENGTH_SHORT).show();
             }
         });
 

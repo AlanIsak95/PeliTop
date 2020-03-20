@@ -9,6 +9,40 @@ public class Pelicula {
     private String poster_path;
     private String backdrop_path;
 
+    private int ID_PRODUCTO;
+
+
+
+
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setVote_average(float vote_average) {
+        this.vote_average = vote_average;
+    }
+
+    public void setOverview(String overview) {
+        this.overview = overview;
+    }
+
+    public void setRelease_date(String release_date) {
+        this.release_date = release_date;
+    }
+
+    public void setPoster_path(String poster_path) {
+        this.poster_path = poster_path;
+    }
+
+    public void setBackdrop_path(String backdrop_path) {
+        this.backdrop_path = backdrop_path;
+    }
+
+    public void setID_PRODUCTO(int ID_PRODUCTO) {
+        this.ID_PRODUCTO = ID_PRODUCTO;
+    }
+
 
 
     public String getTitle() {
@@ -34,4 +68,7 @@ public class Pelicula {
     public String getBackdrop_path() {
         return backdrop_path;
     }
+
+    public int getID_PRODUCTO() { return ID_PRODUCTO; }
+
 }
