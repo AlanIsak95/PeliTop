@@ -33,7 +33,7 @@ public class Adapter extends PagerAdapter {
     //Butter Knife
     @BindView(R.id.imagenCardView) ImageView imageView;
     @BindView(R.id.titleCardView) TextView textView;
-    @BindView(R.id.cardViewID) ImageView cardView;
+    @BindView(R.id.cardViewID) CardView cardView;
 
 
 
