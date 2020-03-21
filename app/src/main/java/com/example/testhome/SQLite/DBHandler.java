@@ -7,6 +7,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 import androidx.annotation.Nullable;
+
+import com.example.testhome.Interface.IDBHandler;
 import com.example.testhome.Modelo.Pelicula;
 import com.example.testhome.Util.Constants;
 import java.util.ArrayList;
@@ -14,7 +16,7 @@ import java.util.List;
 
 
 //Clase para crear la DB y el CRUD (Create and Read)
-public class DBHandler extends SQLiteOpenHelper {
+public class DBHandler extends SQLiteOpenHelper implements IDBHandler {
 
 
 
@@ -62,6 +64,7 @@ public class DBHandler extends SQLiteOpenHelper {
     //CRUD (Create,Read)
 
     //ADD
+    @Override
     public void addItem(Pelicula item){
 
         SQLiteDatabase db = this.getWritableDatabase();
@@ -92,6 +95,7 @@ public class DBHandler extends SQLiteOpenHelper {
     }
 
     //regresa la Pelicula pasandole el ID
+    @Override
     public Pelicula getItemById(int id){
 
         id=id+1;
@@ -134,6 +138,7 @@ public class DBHandler extends SQLiteOpenHelper {
     }
 
     //Regresa la lista de Peliculas
+    @Override
     public List<Pelicula> getAll(){
 
         SQLiteDatabase db = this.getReadableDatabase();
@@ -180,6 +185,7 @@ public class DBHandler extends SQLiteOpenHelper {
     }
 
     //regresa la cantidad de resultados de la DB
+    @Override
     public int getItemCount(){
 
         String conteo ="select * from "+ Constants.DB_TABLE_NAME;

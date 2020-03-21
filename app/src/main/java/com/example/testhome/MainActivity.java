@@ -6,6 +6,8 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 import android.widget.Toast;
+
+import com.example.testhome.Interface.IMain;
 import com.example.testhome.Interface.JSONPlaceHolderAPI;
 import com.example.testhome.Modelo.ObjetoJSON;
 import com.example.testhome.Modelo.Pelicula;
@@ -26,7 +28,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements IMain {
 
     //Declaracion de componentes
     protected List <Pelicula> listaPeliculaTOP10;
@@ -59,9 +61,9 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
     //Revisa si existen datos en SQLite y si es asi carga el carrusel con la lista existente, de lo contrario manda a llamarlos con Retrofit
-    private void ByPassActivity() {
+    @Override
+    public void ByPassActivity() {
 
         if (dbMaster.getItemCount() > 0){
 
@@ -78,8 +80,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     //Recupera una lista de peliculas mediante Retrofit
-    private void getDataByRetrofit(){
+    @Override
+    public void getDataByRetrofit(){
 
         //Obj retrofit donde declaramos la URL base y a donde apuntaremos esta en la Interface
         Retrofit retrofit= new Retrofit.Builder()
@@ -132,7 +136,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Carga las imagenes en el carrusel
-    private void cargarImagenesCarrusel(List <Pelicula> listtop10) {
+    @Override
+    public void cargarImagenesCarrusel(List <Pelicula> listtop10) {
 
         //creamos un adaptador para el viewPager, pasandole la lista de peliculas y el contexto actual
         adapter = new Adapter(listtop10,getApplicationContext());

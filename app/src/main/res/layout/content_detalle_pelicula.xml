@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/negro"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".DetallePelicula"
     tools:showIn="@layout/activity_detalle_pelicula">
@@ -11,12 +12,13 @@
 
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:orientation="vertical">
 
         <TextView
+            android:textColor="@color/blanco"
             android:id="@+id/titulo_pelicula_detalle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -27,6 +29,7 @@
 
 
         <TextView
+            android:textColor="@color/blanco"
             android:id="@+id/valoracion_pelicula_detalle"
             android:layout_marginTop="8dp"
             android:layout_width="wrap_content"
@@ -41,12 +44,13 @@
             android:layout_width="wrap_content"
             android:numStars="10"
             android:rating="0"
-            android:backgroundTint="@color/blanco"
+            android:background="@color/negro"
             style="?android:attr/ratingBarStyleSmall"
             android:stepSize="0"
             android:layout_height="wrap_content"></RatingBar>
 
         <TextView
+            android:textColor="@color/blanco"
             android:id="@+id/fecha_lanzamiento_pelicula_detalle"
             android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
@@ -58,11 +62,13 @@
 
 
         <TextView
+            android:layout_gravity="center"
+            android:textColor="@color/blanco"
             android:id="@+id/resumen_pelicula_detalle"
             android:layout_marginTop="10dp"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="10dp"
+            android:textSize="15dp"
 
             />
 
