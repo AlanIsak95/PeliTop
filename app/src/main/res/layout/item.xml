@@ -9,37 +9,22 @@
         android:id="@+id/cardViewID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="20dp"
-        android:layout_margin="8dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="25dp"
+        android:layout_margin="15dp"
         >
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+
 
             <ImageView
                 android:id="@+id/imagenCardView"
-                android:background="@drawable/defaultimagen"
-                android:scaleType="centerCrop"
+                android:layout_gravity="center"
+                android:background="@color/negro"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"></ImageView>
-
-            <TextView
-                android:id="@+id/titleCardView"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#262626"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="16dp"
-                android:textSize="16sp"
-                android:layout_below="@id/imagenCardView"
-                android:text="Hola este es el valor"
-                ></TextView>
+                android:layout_height="400dp"></ImageView>
 
 
 
-        </RelativeLayout>
 
 
     </androidx.cardview.widget.CardView>

@@ -2,16 +2,17 @@ package com.example.testhome.Interface;
 
 
 import com.example.testhome.Modelo.ObjetoJSON;
+import com.example.testhome.Util.Constants;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
 
-//Metodo para obvtener info
 public interface JSONPlaceHolderAPI {
 
-    @GET("top_rated?api_key=22ca2445747ab8ef473c89b05cb451cc")
+    //Con retrofit utilizamos la anotacion GET
+    @GET(Constants.API_POINT+Constants.API_VAR_KEY+Constants.API_KEY+Constants.API_VAR_LENG+Constants.API_LENG)
 
+    //metodo que regresa el objeto con la lista de peliculas dentro
     Call<ObjetoJSON> getObjJSON();
-    //Objeto que tiene la lista de peliculas.
 
 }

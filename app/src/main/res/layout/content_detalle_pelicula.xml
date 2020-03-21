@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".DetallePelicula"
+    tools:showIn="@layout/activity_detalle_pelicula">
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titulo_pelicula_detalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="@string/titulo_pelicula_detalle_default_value"
+            />
+
+
+        <TextView
+            android:id="@+id/valoracion_pelicula_detalle"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            android:text="@string/valoracion_de_usuarios_detalle_pelicula"
+            />
+
+        <RatingBar
+            android:id="@+id/rating_bar_pelicula_detalle"
+            android:layout_width="wrap_content"
+            android:numStars="10"
+            android:rating="0"
+            android:backgroundTint="@color/blanco"
+            style="?android:attr/ratingBarStyleSmall"
+            android:stepSize="0"
+            android:layout_height="wrap_content"></RatingBar>
+
+        <TextView
+            android:id="@+id/fecha_lanzamiento_pelicula_detalle"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            android:text="@string/fecha_de_lanzamiento_pelicula_detalle"
+            />
+
+
+        <TextView
+            android:id="@+id/resumen_pelicula_detalle"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+
+            />
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</androidx.core.widget.NestedScrollView>

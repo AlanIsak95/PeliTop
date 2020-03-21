@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gris"
+    android:fitsSystemWindows="true"
+    tools:context=".DetallePelicula">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/negro"
+        android:fitsSystemWindows="true">
+
+        <ImageView
+            android:id="@+id/imagen_pelicula_detalle"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/negro"
+            android:fitsSystemWindows="true"
+            android:scaleType="fitXY"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar">
+
+        </ImageView>
+
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <include layout="@layout/content_detalle_pelicula"
+        android:id="@+id/contenedor_pelicula_detalle"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_ok_pelicula_detalle"
+            android:text="@string/regresar_text_pelicula_detalle"
+            android:textStyle="bold"
+            android:textColor="@color/gris_claro"
+            android:background="@color/cardview_dark_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+        </Button>
+
+
+
+    </LinearLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

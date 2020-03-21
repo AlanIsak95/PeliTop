@@ -6,17 +6,14 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
-
 import androidx.annotation.Nullable;
-
 import com.example.testhome.Modelo.Pelicula;
 import com.example.testhome.Util.Constants;
-
-import java.text.DateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
+
+//Clase para crear la DB y el CRUD (Create and Read)
 public class DBHandler extends SQLiteOpenHelper {
 
 
@@ -24,7 +21,7 @@ public class DBHandler extends SQLiteOpenHelper {
     private final Context context;
 
 
-    //necesita un constructor que pase el contexto, nombre de la DB y version
+    //usamos la palabra Super para pasar los datos para SQLiteOpenHelper ( el contexto, nombre de la DB y version)
     public DBHandler(@Nullable Context context) {
         super(context, Constants.DB_NAME,null,Constants.DB_VERSION);
         this.context = context;
@@ -50,7 +47,7 @@ public class DBHandler extends SQLiteOpenHelper {
     }
 
 
-    //elimina la tabla si existe
+
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
 
@@ -61,10 +58,10 @@ public class DBHandler extends SQLiteOpenHelper {
 
 
 
-    //CRUD
+
+    //CRUD (Create,Read)
 
     //ADD
-    //db.Insert(TableName, null, ContentValues)
     public void addItem(Pelicula item){
 
         SQLiteDatabase db = this.getWritableDatabase();
@@ -94,10 +91,10 @@ public class DBHandler extends SQLiteOpenHelper {
 
     }
 
-    //Select Pelicula by ID
-    //db.query(TableName,[columnas], Where by ID)
+    //regresa la Pelicula pasandole el ID
     public Pelicula getItemById(int id){
 
+        id=id+1;
         SQLiteDatabase db = this.getReadableDatabase();
         Pelicula peliculaItem = new Pelicula();
 
@@ -136,8 +133,7 @@ public class DBHandler extends SQLiteOpenHelper {
 
     }
 
-
-
+    //Regresa la lista de Peliculas
     public List<Pelicula> getAll(){
 
         SQLiteDatabase db = this.getReadableDatabase();
@@ -183,9 +179,7 @@ public class DBHandler extends SQLiteOpenHelper {
 
     }
 
-
-    //getItemCount
-    //db.rawQuery(Select * from tablename , null )
+    //regresa la cantidad de resultados de la DB
     public int getItemCount(){
 
         String conteo ="select * from "+ Constants.DB_TABLE_NAME;

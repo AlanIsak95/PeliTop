@@ -2,10 +2,13 @@ package com.example.testhome.Modelo;
 
 import java.util.List;
 
+//El Objeto JSON en su atributo results contiene la lista de Peliculas
 public class ObjetoJSON {
-//vista general del objeto JSON
+
+    //Declaramos la variable que nos interesa recuperar
     private List <Pelicula> results;
 
+    //Getter de la lista
     public List<Pelicula> getListaPelicula() {
         return results;
     }

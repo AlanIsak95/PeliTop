@@ -3,9 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#646464"
+    android:background="@color/gris"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
+
+    <TextView
+        android:layout_width="300dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="20dp"
+        android:textColor="@color/blanco"
+        android:text="@string/titulo_menu_top"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/viewPager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"

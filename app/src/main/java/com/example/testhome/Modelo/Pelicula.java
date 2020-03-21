@@ -1,6 +1,10 @@
 package com.example.testhome.Modelo;
 
+//Modelo de la Pelicula
 public class Pelicula {
+
+
+    private int ID_PRODUCTO;
 
     private String title;
     private float vote_average;
@@ -8,8 +12,6 @@ public class Pelicula {
     private String release_date;
     private String poster_path;
     private String backdrop_path;
-
-    private int ID_PRODUCTO;
 
 
 

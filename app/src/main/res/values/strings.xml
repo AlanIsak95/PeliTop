@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">TestHome</string>
+    <string name="title_activity_detalle_pelicula">DetallePelicula</string>
+    <string name="valoracion_de_usuarios_detalle_pelicula">Valoracion de usuarios</string>
+    <string name="fecha_de_lanzamiento_pelicula_detalle">Fecha de lanzamiento</string>
+    <string name="titulo_menu_top">TOP 10 PELICULAS POR VALORACION DE USUARIOS</string>
+    <string name="regresar_text_pelicula_detalle">Regresar</string>
+    <string name="titulo_pelicula_detalle_default_value">Titulo</string>
 </resources>
