@@ -1,4 +1,4 @@
-package com.example.testhome;
+package com.ThechnoSk.testhome;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.example.testhome.SQLite;
+package com.ThechnoSk.testhome.SQLite;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -8,9 +8,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 import androidx.annotation.Nullable;
 
-import com.example.testhome.Interface.IDBHandler;
-import com.example.testhome.Modelo.Pelicula;
-import com.example.testhome.Util.Constants;
+import com.ThechnoSk.testhome.Interface.IDBHandler;
+import com.ThechnoSk.testhome.Modelo.Pelicula;
+import com.ThechnoSk.testhome.Util.Constants;
 import java.util.ArrayList;
 import java.util.List;
 

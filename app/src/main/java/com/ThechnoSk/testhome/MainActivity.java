@@ -1,4 +1,4 @@
-package com.example.testhome;
+package com.ThechnoSk.testhome;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -7,12 +7,12 @@ import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.example.testhome.Interface.IMain;
-import com.example.testhome.Interface.JSONPlaceHolderAPI;
-import com.example.testhome.Modelo.ObjetoJSON;
-import com.example.testhome.Modelo.Pelicula;
-import com.example.testhome.SQLite.DBHandler;
-import com.example.testhome.Util.Constants;
+import com.ThechnoSk.testhome.Interface.IMain;
+import com.ThechnoSk.testhome.Interface.JSONPlaceHolderAPI;
+import com.ThechnoSk.testhome.Modelo.ObjetoJSON;
+import com.ThechnoSk.testhome.Modelo.Pelicula;
+import com.ThechnoSk.testhome.SQLite.DBHandler;
+import com.ThechnoSk.testhome.Util.Constants;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -69,10 +69,10 @@ public class MainActivity extends AppCompatActivity implements IMain {
 
             listaPeliculaTOP10 = dbMaster.getAll();
             cargarImagenesCarrusel(listaPeliculaTOP10);
-            Toast.makeText(this, "Datos desde SQLite", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Datos desde SQLite", Toast.LENGTH_SHORT).show();
 
         }else {
-            Toast.makeText(this, "Datos desde Retrofit", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Datos desde Retrofit", Toast.LENGTH_SHORT).show();
             getDataByRetrofit();
         }
 

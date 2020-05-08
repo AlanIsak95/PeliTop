@@ -1,4 +1,4 @@
-package com.example.testhome.Util;
+package com.ThechnoSk.testhome.Util;
 
 //Constantes de la aplicacion
 public class Constants {

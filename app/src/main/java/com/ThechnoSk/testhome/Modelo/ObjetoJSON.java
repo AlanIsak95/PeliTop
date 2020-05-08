@@ -1,4 +1,4 @@
-package com.example.testhome.Modelo;
+package com.ThechnoSk.testhome.Modelo;
 
 import java.util.List;
 

@@ -1,8 +1,8 @@
-package com.example.testhome.Interface;
+package com.ThechnoSk.testhome.Interface;
 
 
-import com.example.testhome.Modelo.ObjetoJSON;
-import com.example.testhome.Util.Constants;
+import com.ThechnoSk.testhome.Modelo.ObjetoJSON;
+import com.ThechnoSk.testhome.Util.Constants;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

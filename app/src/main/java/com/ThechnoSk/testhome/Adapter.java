@@ -1,23 +1,18 @@
-package com.example.testhome;
+package com.ThechnoSk.testhome;
 
 import android.content.Context;
 import android.content.Intent;
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.viewpager.widget.PagerAdapter;
-import androidx.viewpager.widget.ViewPager;
 
-import com.example.testhome.Modelo.Pelicula;
-import com.example.testhome.Util.Constants;
+import com.ThechnoSk.testhome.Modelo.Pelicula;
+import com.ThechnoSk.testhome.Util.Constants;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;

@@ -1,19 +1,14 @@
-package com.example.testhome;
+package com.ThechnoSk.testhome;
 
 import android.os.Bundle;
 
-import com.example.testhome.Modelo.Pelicula;
-import com.example.testhome.SQLite.DBHandler;
-import com.example.testhome.Util.Constants;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import com.ThechnoSk.testhome.Modelo.Pelicula;
+import com.ThechnoSk.testhome.SQLite.DBHandler;
+import com.ThechnoSk.testhome.Util.Constants;
 import com.squareup.picasso.Picasso;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
-import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;

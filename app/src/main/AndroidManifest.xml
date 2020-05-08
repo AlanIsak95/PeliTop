@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.testhome">
+    package="com.ThechnoSk.testhome">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -13,12 +13,12 @@
         android:theme="@style/AppTheme.NoActionBar">
 
         <activity
-            android:name=".DetallePelicula"
+            android:name="com.ThechnoSk.testhome.DetallePelicula"
             android:label="@string/title_activity_detalle_pelicula"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar.NoActionBar" />
 
-        <activity android:name=".MainActivity"
+        <activity android:name="com.ThechnoSk.testhome.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

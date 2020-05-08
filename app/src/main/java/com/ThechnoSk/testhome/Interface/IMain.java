@@ -1,6 +1,6 @@
-package com.example.testhome.Interface;
+package com.ThechnoSk.testhome.Interface;
 
-import com.example.testhome.Modelo.Pelicula;
+import com.ThechnoSk.testhome.Modelo.Pelicula;
 
 import java.util.List;
 
