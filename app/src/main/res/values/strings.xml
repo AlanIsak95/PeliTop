@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TopTeen</string>
+    <string name="app_name">TopPeli</string>
     <string name="title_activity_detalle_pelicula">DetallePelicula</string>
     <string name="valoracion_de_usuarios_detalle_pelicula">Valoracion de usuarios</string>
     <string name="fecha_de_lanzamiento_pelicula_detalle">Fecha de lanzamiento</string>
